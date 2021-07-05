@@ -3,6 +3,7 @@ package com.example.springdatajparelationships.database;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Data
 @Entity
@@ -15,4 +16,11 @@ public class Category {
 
     @Column(unique = true, nullable = false)
     private String category;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "parent_id")
+    private Category parent;
+
+    @OneToMany(mappedBy = "parent")
+    private Collection<Category> children;
 }
