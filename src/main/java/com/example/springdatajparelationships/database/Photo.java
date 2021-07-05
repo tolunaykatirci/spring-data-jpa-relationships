@@ -18,4 +18,6 @@ public class Photo {
     private String urlMedium;
     private String urlLarge;
 
+    @OneToOne(mappedBy = "photo")
+    private Book book;
 }
