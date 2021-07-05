@@ -23,4 +23,8 @@ public class Category {
 
     @OneToMany(mappedBy = "parent")
     private Collection<Category> children;
+
+    @ManyToMany(mappedBy = "categories")
+    private Collection<Book> books;
+
 }

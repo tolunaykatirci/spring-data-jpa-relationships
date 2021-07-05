@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Collection;
 
 @Data
 @Entity
@@ -24,4 +25,7 @@ public class Author {
     private String lastName;
 
     private Date birthDate;
+
+    @ManyToMany(mappedBy = "authors")
+    private Collection<Book> books;
 }
