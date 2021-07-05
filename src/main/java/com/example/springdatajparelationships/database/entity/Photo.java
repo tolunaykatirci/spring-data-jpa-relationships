@@ -1,5 +1,6 @@
-package com.example.springdatajparelationships.database;
+package com.example.springdatajparelationships.database.entity;
 
+import com.example.springdatajparelationships.database.entity.Book;
 import lombok.Data;
 
 import javax.persistence.*;

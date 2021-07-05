@@ -1,4 +1,4 @@
-package com.example.springdatajparelationships.database;
+package com.example.springdatajparelationships.database.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
